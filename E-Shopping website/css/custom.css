@@ -1,0 +1,25 @@
+﻿.center {
+    text-align:center;
+}
+
+    .center-page {
+        width: 300px;
+        height: 300px;
+        position: absolute;
+        top: -40px;
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
+        margin:auto;
+    }
+
+.footer-pos {
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 600px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin: auto;
+}
