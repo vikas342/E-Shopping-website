@@ -11,7 +11,7 @@ namespace E_Shopping_website
 {
 
 
-    public partial class AddBrand
+    public partial class AddGender
     {
 
         /// <summary>
@@ -24,22 +24,22 @@ namespace E_Shopping_website
         protected global::System.Web.UI.WebControls.Label Label1;
 
         /// <summary>
-        /// txtBrand control.
+        /// txtGender control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtBrand;
+        protected global::System.Web.UI.WebControls.TextBox txtGender;
 
         /// <summary>
-        /// RequiredFieldValidator1BrandName control.
+        /// RequiredFieldValidator1Gender control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1BrandName;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1Gender;
 
         /// <summary>
         /// btnAddBrand control.
@@ -51,12 +51,12 @@ namespace E_Shopping_website
         protected global::System.Web.UI.WebControls.Button btnAddBrand;
 
         /// <summary>
-        /// rptrBrands control.
+        /// rptrGender control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater rptrBrands;
+        protected global::System.Web.UI.WebControls.Repeater rptrGender;
     }
 }

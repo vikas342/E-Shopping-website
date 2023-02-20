@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="AddCategory.aspx.cs" Inherits="E_Shopping_website.AddCategory" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="AddGender.aspx.cs" Inherits="E_Shopping_website.AddGender" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ConntentPlaceHolder1" runat="server">
 
 
@@ -6,13 +6,13 @@
       <div class="container">
 
                 <div class="form-horizontal">
-                    <h2>Add Category</h2>
+                    <h2>Add Gender</h2>
                     <hr />
                     <div class="form-group">
-                        <asp:Label ID="Label1" cssClass="col-md-2 control-label" runat="server" Text="Category Name"></asp:Label>
+                        <asp:Label ID="Label1" cssClass="col-md-2 control-label" runat="server" Text="Gender"></asp:Label>
                         <div class="col-md-3">
-                            <asp:TextBox ID="txtCategory" cssClass="form-control" runat="server"></asp:TextBox>
-                            <asp:RequiredFieldValidator ID="RequiredFieldValidator1txtCategoryName" runat="server" ErrorMessage="Enter valid Category name" cssClass="text-danger" ControlToValidate="txtCategory" ForeColor="Red"></asp:RequiredFieldValidator>
+                            <asp:TextBox ID="txtGender" cssClass="form-control" runat="server"></asp:TextBox>
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator1Gender" runat="server" ErrorMessage="Enter valid Gender" cssClass="text-danger" ControlToValidate="txtGender" ForeColor="Red"></asp:RequiredFieldValidator>
 
                         </div>
 
@@ -27,7 +27,7 @@
                           <div class="col-md-2"></div>
                         <div class="col-md-6">
 
-                            <asp:Button ID="btnAddCategory" runat="server" CssClass="btn btn-success" Text="ADD Category" OnClick="btnAddCategory_Click" />
+                            <asp:Button ID="btnAddBrand" runat="server" CssClass="btn btn-success" Text="ADD" OnClick="btnAddGender_Click" />
                          
 
                         </div>
@@ -35,16 +35,20 @@
                     </div>
           </div>
 
+               
 
-          
-                   <h1>
-                       Categories
+
+                   
+           <h1>
+                       Gender
                    </h1>
         
-            <div class="panel panel-default">
-          <div class="panel-heading">All Categories</div>
+                      <div class="panel panel-default">
 
-          <asp:Repeater ID="rptrCategories" runat="server">
+
+          <div class="panel-heading">All Gender</div>
+
+          <asp:Repeater ID="rptrGender" runat="server">
 
               <HeaderTemplate>
 
@@ -57,8 +61,9 @@
                           #
                       </th>
                       <th>
-                          Categories
+                          Gender
                       </th>
+                      
                       <th>
                           Edit
                       </th>
@@ -72,13 +77,14 @@
               <ItemTemplate>
                    <tr>
                       <th>
-                          <%# Eval("CatId") %>
+                          <%# Eval("GenderId") %>
                       </th>
-
                       <td>
-                          <%# Eval("CatName") %>
+                          <%# Eval("GenderName") %>
                       </td>
+                        
 
+                      
                       <td>
                           Edit
                       </td>
@@ -99,18 +105,10 @@
              </asp:Repeater>
 
 
-              
-                </div>
-        
-
-               
-
-
-                   
 
 
 
-
+                          </div>
                   
 
                     </div>

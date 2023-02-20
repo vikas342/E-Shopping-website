@@ -37,14 +37,88 @@
                
 
 
-                   
+                   <h1>
+                       Brands
+                   </h1>
+        
+          <div class="panel panel-default">
+
+          <div class="panel-heading">All Brands</div>
+
+          <asp:Repeater ID="rptrBrands" runat="server">
+
+              <HeaderTemplate>
+
+                  <table class="table">
 
 
+              <thead>
+                  <tr>
+                      <th>
+                          #
+                      </th>
+                      <th>
+                          Brand
+                      </th>
+                      <th>
+                          Edit
+                      </th>
+                  </tr>
+              </thead>
 
+              <tbody>
+
+              </HeaderTemplate>
+
+              <ItemTemplate>
+                   <tr>
+                      <th>
+                          <%# Eval("BrandId") %>
+                      </th>
+
+                      <td>
+                          <%# Eval("Name") %>
+                      </td>
+
+                      <td>
+                          Edit
+                      </td>
+                  </tr>
+
+              </ItemTemplate>
+
+              <FooterTemplate>
 
                   
+               </tbody>
 
-                    </div>
+          </table>
+
+
+              </FooterTemplate>
+
+             </asp:Repeater>
+
+
+              </div>
+
+        
+
+              
+                 
+
+         
+
+
+
+
+          
+          
+
+          </div>
+                  
+    
+                  
                 
 
 </asp:Content>

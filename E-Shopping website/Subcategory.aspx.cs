@@ -17,11 +17,40 @@ namespace E_Shopping_website
             if (!IsPostBack)
             {
                 BindMainCat();
+                BindSubCategoryRepeater();
             }
 
         }
 
-      
+        private void BindSubCategoryRepeater()
+        {
+
+
+
+            using (SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["MyShoppingDb"].ConnectionString))
+            {
+                using (SqlCommand cmd = new SqlCommand("select A. *, B. * from tblSUBCategory A inner join tblCategory B on B.CatId = A.MainCatID", con))
+                {
+                    using (SqlDataAdapter sda = new SqlDataAdapter(cmd))
+                    {
+                        DataTable dt = new DataTable();
+                        sda.Fill(dt);
+                        rptrSubCategories.DataSource = dt;
+                        rptrSubCategories.DataBind();
+
+                    }
+
+                }
+
+
+
+            }
+
+
+
+        }
+
+
 
         protected void btnAddCategory_Click(object sender, EventArgs e)
         {
@@ -42,6 +71,7 @@ namespace E_Shopping_website
 
 
             }
+            BindSubCategoryRepeater();
         }
 
         private void BindMainCat()

@@ -17,6 +17,32 @@ namespace E_Shopping_website
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            BindBrandRepeater();
+
+
+        }
+
+        private void BindBrandRepeater()
+        {
+
+            using (SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["MyShoppingDb"].ConnectionString))
+            {
+                using (SqlCommand cmd= new SqlCommand("select * from tblBrands",con))
+                {
+                    using (SqlDataAdapter sda = new SqlDataAdapter(cmd)) 
+                    { 
+                        DataTable dt = new DataTable(); 
+                        sda.Fill(dt);
+                        rptrBrands.DataSource = dt; 
+                        rptrBrands.DataBind();
+                    
+                    }
+
+                }
+                
+
+
+            }
 
         }
 
@@ -37,6 +63,8 @@ namespace E_Shopping_website
 
 
             }
+
+            BindBrandRepeater();
         }
     }
 }

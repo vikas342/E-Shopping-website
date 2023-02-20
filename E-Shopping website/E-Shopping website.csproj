@@ -108,7 +108,9 @@
     <Content Include="About.aspx" />
     <Content Include="AddBrand.aspx" />
     <Content Include="AddCategory.aspx" />
+    <Content Include="AddGender.aspx" />
     <Content Include="AddProduct.aspx" />
+    <Content Include="AddSize.aspx" />
     <Content Include="AdminHome.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
@@ -340,12 +342,26 @@
     <Compile Include="AddCategory.aspx.designer.cs">
       <DependentUpon>AddCategory.aspx</DependentUpon>
     </Compile>
+    <Compile Include="AddGender.aspx.cs">
+      <DependentUpon>AddGender.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddGender.aspx.designer.cs">
+      <DependentUpon>AddGender.aspx</DependentUpon>
+    </Compile>
     <Compile Include="AddProduct.aspx.cs">
       <DependentUpon>AddProduct.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="AddProduct.aspx.designer.cs">
       <DependentUpon>AddProduct.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AddSize.aspx.cs">
+      <DependentUpon>AddSize.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddSize.aspx.designer.cs">
+      <DependentUpon>AddSize.aspx</DependentUpon>
     </Compile>
     <Compile Include="AdminHome.aspx.cs">
       <DependentUpon>AdminHome.aspx</DependentUpon>

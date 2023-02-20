@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Configuration;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
@@ -13,6 +14,34 @@ namespace E_Shopping_website
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            BindCategoryRepeater();
+        }
+
+        private void BindCategoryRepeater()
+        {
+
+           
+
+                using (SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["MyShoppingDb"].ConnectionString))
+                {
+                    using (SqlCommand cmd = new SqlCommand("select * from tblCategory", con))
+                    {
+                        using (SqlDataAdapter sda = new SqlDataAdapter(cmd))
+                        {
+                            DataTable dt = new DataTable();
+                            sda.Fill(dt);
+                            rptrCategories.DataSource = dt;
+                            rptrCategories.DataBind();
+
+                        }
+
+                    }
+
+
+
+                }
+
+          
 
         }
 
@@ -33,6 +62,7 @@ namespace E_Shopping_website
 
 
             }
+            BindCategoryRepeater();
         }
     }
 }
