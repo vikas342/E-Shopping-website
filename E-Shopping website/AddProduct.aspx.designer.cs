@@ -24,13 +24,13 @@ namespace E_Shopping_website
         protected global::System.Web.UI.WebControls.Label Label1;
 
         /// <summary>
-        /// txtProductNae control.
+        /// txtProductName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtProductNae;
+        protected global::System.Web.UI.WebControls.TextBox txtProductName;
 
         /// <summary>
         /// Label2 control.
@@ -150,13 +150,31 @@ namespace E_Shopping_website
         protected global::System.Web.UI.WebControls.Label Label7;
 
         /// <summary>
-        /// txtDynamicsize control.
+        /// cblSize control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtDynamicsize;
+        protected global::System.Web.UI.WebControls.CheckBoxList cblSize;
+
+        /// <summary>
+        /// Label19 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label19;
+
+        /// <summary>
+        /// txtQuantity control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtQuantity;
 
         /// <summary>
         /// Label8 control.
